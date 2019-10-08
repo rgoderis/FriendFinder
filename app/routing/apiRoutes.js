@@ -5,6 +5,16 @@ module.exports = function(app){
         return res.json(friends)
     });
     app.post("/api/friends", function(req, res){
+        var newFriend = req.body
+        var score = [] 
+        for(var i = 0; i < newFriend.scores.length; i++){
+            var newScore = parseInt(newFriend.scores[i])
+            score.push(newScore)
+        }
+        console.log(newFriend)
+        console.log(score)
+        newFriend.scores = score
+        friends.push(newFriend);
         // run logic to compare scores
         // loop through array of friends
         // loop through the score array of each friend
