@@ -18,11 +18,11 @@
                 <h4>About You</h4>
                 <div class="form-group">
                     <label for="name">Name (Required)</label>
-                    <input type="text" class="form-control" id="name">
+                    <input type="text" class="form-control" id="name" required>
                 </div>
                 <div class="form-group">
                     <label for="photo">Link to Photo Image (Required)</label>
-                    <input type="text" class="form-control" id="photo">
+                    <input type="text" class="form-control" id="photo" required>
                 </div>
             </div>
             <div class="form-group">
@@ -30,8 +30,8 @@
                 <div class="form-group">
                     <label for="question1">Your mind is always buzzing with unexplored ideas and plans.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question1">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question1" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -46,8 +46,8 @@
                 <div class="form-group">
                     <label for="question2">Generally speaking, you rely more on your experience than your imagination.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question2">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question2" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -62,8 +62,8 @@
                 <div class="form-group">
                     <label for="question3">You find it easy to stay relaxed and focused even when there is some pressure.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question3">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question3" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -78,8 +78,8 @@
                 <div class="form-group">
                     <label for="question4">You rarely do something just out of sheer curiosity.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question4">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question4" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -94,8 +94,8 @@
                 <div class="form-group">
                     <label for="question5">People can rarely upset you.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question5">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question5" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -110,8 +110,8 @@
                 <div class="form-group">
                     <label for="question6">It is often difficult for you to relate to other people’s feelings.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question6">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question6" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -126,8 +126,8 @@
                 <div class="form-group">
                     <label for="question7">In a discussion, truth should be more important than people’s sensitivities.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question7">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question7" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -142,8 +142,8 @@
                 <div class="form-group">
                     <label for="question8">You rarely get carried away by fantasies and ideas.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question8">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question8" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -158,8 +158,8 @@
                 <div class="form-group">
                     <label for="question9">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question9">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question9" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -174,8 +174,8 @@
                 <div class="form-group">
                     <label for="question10">You feel more energetic after spending time with a group of people.</label>
                     <div class="input-group mb-3">
-                      <select class="custom-select" id="question10">
-                        <option selected>Select an Option</option>
+                      <select class="custom-select" id="question10" required>
+                        <option disabled selected>Select an Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -194,6 +194,17 @@
     <script>
         $("#submit").on("click", function(event){
             event.preventDefault();
+            if($("#name").val().trim()=== "" || $("#photo").val().trim()=== "" || $(".custom-select").val()=== null){
+                console.log("please fill out all questions")
+                return false
+            } else {
+                var newFriend = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [parseInt($("#question1").val()),parseInt($("#question2").val()),parseInt($("#question3").val()),parseInt($("#question4").val()),parseInt($("#question5").val()),parseInt($("#question6").val()),parseInt($("#question7").val()),parseInt($("#question8").val()),parseInt($("#question9").val()),parseInt($("#question10").val()),]
+                }
+                console.log(newFriend)
+            }
         })
     </script>
     
