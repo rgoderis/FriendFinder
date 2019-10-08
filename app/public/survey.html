@@ -185,13 +185,16 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary" id="submit">Submit</button>
 
         </form>
     </div>
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
+        $("#submit").on("click", function(event){
+            event.preventDefault();
+        })
     </script>
     
 </body>
