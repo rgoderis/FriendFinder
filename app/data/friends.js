@@ -48,7 +48,7 @@ var friends = [
           ]
       },
     {
-        "name":"Scooby",
+        "name":"Scooby Doo",
         "photo":"https://image.businessinsider.com/59721be09d0918319c32a058?width=1100&format=jpeg&auto=webp",
         "scores":[
             1,
